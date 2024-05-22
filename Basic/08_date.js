@@ -34,7 +34,7 @@ console.log(myCreatedDate3.toLocaleString());
 // Output:5/18/2024, 12:00:00 AM
 
 
-let myTimeStamp = Date.now()
+let myTimeStamp = Date.now()  // when we want to number millisec to sec then we use Date.now
 
 console.log(myTimeStamp);
 // Output:1716054353943
