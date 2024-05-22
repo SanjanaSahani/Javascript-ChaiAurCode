@@ -1,3 +1,5 @@
+// *************Date and Time*********************
+
 let MyDate = new Date()
 console.log(MyDate);
 // Output: 2024-05-18T17:27:59.786Z
