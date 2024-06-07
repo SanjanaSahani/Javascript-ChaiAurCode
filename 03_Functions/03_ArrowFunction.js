@@ -69,3 +69,16 @@ console.log(addTwo3(3, 4))
 const addTwo4 = (num1, num2) => ({username: "hitesh"})
 console.log(addTwo4(3, 4))
 //Output: { username: 'hitesh' }
+
+//--------Different way to defining function syntax-----
+
+const myArr = [2, 3 ,5 , 1, 8]
+
+myArr.forEach(function(){
+    //this is also a correct syntax for declare function
+})
+
+myArr.forEach(() => {
+    //this is also a correct syntax for declare function
+})
+
