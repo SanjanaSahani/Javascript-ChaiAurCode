@@ -25,7 +25,7 @@ console.log(maxHandshake(5));
 function power(base, exponent){
 return Math.pow(base, exponent)
             // OR
-    // return base ** exponent;
+    return base ** exponent;
 }
 console.log(power(2, 5));
 //Output- 32
