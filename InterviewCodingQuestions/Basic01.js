@@ -92,3 +92,13 @@ if(isArmstrongNumber(numberToCheck)){
     console.log(`${numberToCheck} is Not Armstrong Number`);  
 }
 //Output - 153 is Armstrong Number
+
+// 9. How do you calculate the number of numerical digits in a string? 
+function countDigits(str) {
+  const digits = str.match(/\d/g);
+  return digits ? digits.length : 0;
+}
+
+// Example usage:
+const input = "abc123def456";
+console.log(countDigits(input)); // Output: 6
