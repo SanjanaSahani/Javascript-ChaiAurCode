@@ -102,3 +102,14 @@ function countDigits(str) {
 // Example usage:
 const input = "abc123def456";
 console.log(countDigits(input)); // Output: 6
+
+// 10. how do you find thr non matching characters in a string ?
+function findNonMatching(str, pattern) {
+  // Convert pattern to a character class if needed
+  const regex = new RegExp(`[^${pattern}]`, 'g');
+  return str.match(regex) || [];
+}
+
+// Example: find all characters that are NOT digits or letters
+console.log(findNonMatching("abc123!@#", "a-zA-Z0-9")); // Output: [ '!', '@', '#' ]
+
