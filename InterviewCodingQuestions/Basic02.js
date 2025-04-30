@@ -8,7 +8,7 @@ function reverseString(str) {
 // Output : "olleh"
 
 
-// How do you determine if a string is a palindrome?
+// 2. How do you determine if a string is a palindrome?
 function isPalindrome(str) {
     const reversed = str.split('').reverse().join('');
     return str === reversed;
