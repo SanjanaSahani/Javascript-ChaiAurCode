@@ -61,3 +61,37 @@ function nonMatchingChars(str1, str2) {
 // Example
 console.log(nonMatchingChars("abc", "bcd"));
 // Output:[ 'a', 'd' ]
+
+
+// 6. How do you find out if the two given strings are anagrams?
+
+function areAnagrams(str1, str2) {
+  const normalize = str => str.split('').sort().join('');
+  return normalize(str1) === normalize(str2);
+}
+
+// Example
+console.log(areAnagrams("listen", "silent"));
+// Output:true
+
+
+// 7. How do you calculate the number of vowels and consonants in a string?
+
+function countVowelsAndConsonants(str) {
+  const vowels = 'aeiouAEIOU';
+  let vowelCount = 0, consonantCount = 0;
+
+  for (let char of str) {
+    if (/[a-zA-Z]/.test(char)) {
+      if (vowels.includes(char)) vowelCount++;
+      else consonantCount++;
+    }
+  }
+
+  return { vowelCount, consonantCount };
+}
+
+// Example
+console.log(countVowelsAndConsonants("Hello World"));
+// Output: { vowelCount: 3, consonantCount: 7 }
+
