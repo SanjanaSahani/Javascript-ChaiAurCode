@@ -86,3 +86,18 @@ diamond(5);
 //   ***
 //    *
 
+// 6. Write a program to print Left-Angle Triangle Pattern
+function LeftAngle(n){
+    for(let i = 1; i <= n; i++){
+        console.log(" ".repeat(n - i) + "*".repeat(i));  
+    }
+}
+LeftAngle(5);
+
+
+//Output- 
+    // *
+   // **
+  // ***
+ // ****
+// *****
