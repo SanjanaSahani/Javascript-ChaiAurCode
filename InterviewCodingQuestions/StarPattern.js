@@ -101,3 +101,19 @@ LeftAngle(5);
   // ***
  // ****
 // *****
+
+// 7. Write a program to print Inverted Left-Angle Triangle Pattern
+function InvertedLeftAngle(n){
+    for(let i = n; i >= 1; i--){
+        console.log(" ".repeat(n - i) + "*".repeat(i));  
+    }
+}
+InvertedLeftAngle(5);
+
+
+//Output- 
+// *****
+//  ****
+//   ***
+//    **
+//     * 
