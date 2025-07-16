@@ -142,3 +142,39 @@ hollowSquare(5);
 // *   *
 // *   *
 // *****
+
+// 9. Print a hollow pyramid of stars for a given number of rows n.
+
+function hollowPyramid(rows) {
+  let patternList = [];
+
+  for (let i = 1; i <= rows; i++) {
+    let line = '';
+
+    for (let j = 1; j <= rows - i; j++) {
+      line += ' ';
+    }
+
+    for (let k = 1; k <= 2 * i - 1; k++) {
+      if (k === 1 || k === 2 * i - 1 || i === rows) {
+        line += '*';
+      } else {
+        line += ' ';
+      }
+    }
+
+    patternList.push(line);
+    console.log(line);
+  }
+
+  return patternList;
+}
+
+hollowPyramid(5);
+
+// Output -     
+//     *
+//    * *
+//   *   *
+//  *     *
+// *********
