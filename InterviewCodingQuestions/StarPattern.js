@@ -178,3 +178,31 @@ hollowPyramid(5);
 //   *   *
 //  *     *
 // *********
+
+
+// 10. Half Pyramid with Numbers
+function numberHalfPyramid(rows) {
+  let patternList = [];
+
+  for (let i = 1; i <= rows; i++) {
+    let line = '';
+
+    for (let j = 1; j <= i; j++) {
+      line += j;
+    }
+
+    patternList.push(line);
+    console.log(line);
+  }
+
+  return patternList;
+}
+
+numberHalfPyramid(5);
+
+//Output-
+// 1
+// 12
+// 123
+// 1234
+// 12345
