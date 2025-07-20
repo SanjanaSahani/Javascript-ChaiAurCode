@@ -206,3 +206,36 @@ numberHalfPyramid(5);
 // 123
 // 1234
 // 12345
+
+
+// 11. Print a half pyramid pattern using numbers for a given number n.
+  for (let i = 2; i <= rows; i++) {
+    let line = '';
+
+    for (let j = 0; j < rows - i; j++) {
+      line += ' ';
+    }
+
+    for (let k = 0; k < 2 * i - 1; k++) {
+      line += '*';
+    }
+
+    patternList.push(line);
+    console.log(line);
+  }
+
+  return patternList;
+}
+
+sandglassPattern(5);
+
+// Output -
+// *********
+//  *******
+//   *****
+//    ***
+//     *
+//    ***
+//   *****
+//  *******
+// *********
