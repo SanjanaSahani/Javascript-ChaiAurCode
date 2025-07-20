@@ -208,7 +208,27 @@ numberHalfPyramid(5);
 // 12345
 
 
-// 11. Print a half pyramid pattern using numbers for a given number n.
+// 11. Print a sandglass star pattern for a given number n, where n is the number of rows in the top half.
+ function sandglassPattern(rows) {
+  let patternList = [];
+
+  // Top half (inverted pyramid)
+  for (let i = rows; i >= 1; i--) {
+    let line = '';
+
+    for (let j = 0; j < rows - i; j++) {
+      line += ' ';
+    }
+
+    for (let k = 0; k < 2 * i - 1; k++) {
+      line += '*';
+    }
+
+    patternList.push(line);
+    console.log(line);
+  }
+
+  // Print a half pyramid pattern using numbers for a given number n.
   for (let i = 2; i <= rows; i++) {
     let line = '';
 
@@ -228,6 +248,7 @@ numberHalfPyramid(5);
 }
 
 sandglassPattern(5);
+  
 
 // Output -
 // *********
