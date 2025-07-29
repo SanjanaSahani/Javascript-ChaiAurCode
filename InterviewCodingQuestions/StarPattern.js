@@ -260,3 +260,17 @@ sandglassPattern(5);
 //   *****
 //  *******
 // *********
+
+//  Floyd’s Triangle 
+function printFloydsTriangle(rows) {
+    let num = 1;
+    for (let i = 1; i <= rows; i++) {
+        let line = "";
+        for (let j = 1; j <= i; j++) {
+            line += num + " ";
+            num++;
+        }
+        console.log(line.trim());
+    }
+}
+printFloydsTriangle(5);
