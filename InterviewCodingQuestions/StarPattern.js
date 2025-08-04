@@ -228,7 +228,7 @@ numberHalfPyramid(5);
     console.log(line);
   }
 
-  // Print a half pyramid pattern using numbers for a given number n.
+  // 12. Print a half pyramid pattern using numbers for a given number n.
   for (let i = 2; i <= rows; i++) {
     let line = '';
 
@@ -261,7 +261,8 @@ sandglassPattern(5);
 //  *******
 // *********
 
-//  Floyd’s Triangle 
+
+// 13.  Floyd’s Triangle 
 function printFloydsTriangle(rows) {
     let num = 1;
     for (let i = 1; i <= rows; i++) {
@@ -274,3 +275,59 @@ function printFloydsTriangle(rows) {
     }
 }
 printFloydsTriangle(5);
+// Output-
+// 1
+// 2 3
+// 4 5 6
+// 7 8 9 10
+// 11 12 13 14 15
+
+//14.  Pascal’s Triangle in JavaScript
+
+function printPascalsTriangle(n) {
+    let triangle = [];
+
+    for (let i = 0; i < n; i++) {
+        triangle[i] = [];
+        for (let j = 0; j <= i; j++) {
+            if (j === 0 || j === i) {
+                triangle[i][j] = 1;
+            } else {
+                triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j];
+            }
+        }
+    }
+
+    // Print the triangle
+    for (let i = 0; i < n; i++) {
+        console.log(triangle[i].join(" "));
+    }
+}
+printPascalsTriangle(5);
+
+//Output-
+// 1
+// 1 1
+// 1 2 1
+// 1 3 3 1
+// 1 4 6 4 1
+
+//15.  GCD using Euclidean Algorithm
+function findGCD(a, b) {
+    while (b !== 0) {
+        let temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+console.log("GCD:", findGCD(36, 60));  // Output: 12
+
+//  LCM using GCD
+function findLCM(a, b) {
+    return (a * b) / findGCD(a, b);
+}
+
+// Example:
+console.log("LCM:", findLCM(36, 60));  // Output: 180
